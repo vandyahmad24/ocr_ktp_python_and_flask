@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+  <nav class="navbar navbar-inverse">
+      <div class="container">
+          <p style="color: white;margin-top: 25px;margin-left: 36%;font-size: 25px;">Selamat Datang Di OCR KTP</p>
+      </div>
+  </nav>
+    <div class="container">
+        <div class="row">
+           <h1>Berikut Hasil OCR </h1>
+              <p> {{ hasil[0] }}!</p>
+                <div class="row">
+                    <img src="{{ url_for('static', filename = hasil[1]) }}" width="500" height="300">
+                </div>
+
+        </div>
+    </div>
+{% endblock %}

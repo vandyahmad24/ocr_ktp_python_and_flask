@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+  <nav class="navbar navbar-inverse">
+      <div class="container">
+          <p style="color: white;margin-top: 25px;margin-left: 36%;font-size: 25px;">Selamat Datang Di OCR KTP</p>
+      </div>
+  </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <div style="padding: 150px;">
+                    <center>
+                         <form method="POST" action="http://localhost:5000/uploader" enctype="multipart/form-data">
+                          <div class="form-group">
+                            <label for="exampleInputFile">Upload KTP</label>
+                            <input type="file" name="file" id="exampleInputFile">
+                            <p class="help-block">Upload Foto KTP denga posisi harus lurus vertical</p>
+                          </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
